@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vending Machine</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div style="width: 92.5%; margin: .5em auto; border-bottom: solid black 4px;">
+        <h1 style="text-align: center;">Vending Machine</h1>
+    </div>
+    <ul class="list-group" id="serviceStatus">
+        <!-- Web service status errors display here. -->
+    </ul>
+    <div style="display:table; width:90%; height: 100%; margin: .5em auto 0;">
+        <div class="row" style="display:table-row;">
+            <div style="display: table-cell; min-width: 200px;">
+                <div class="container" id="itemContainer">
+                    <!-- Vending items load here. -->
+                </div>
+            </div>
+            <div style="display: table-cell; min-width: 300px; width: 300px;">
+                <div class="container">
+                    <form class="centered">
+                        <div class="form-group">
+                            <label for="totalMoney" class="col-form-label">Total $ In</label>
+                            <input type="text" class="form-control form-control-sm centered m_0_auto" id="totalMoney" style="width: 7em;" readonly/>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-outline-dark btn-sm w_nine" id="addDollar" onclick="addMoney(1)">Add Dollar</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm w_nine" id="addQuarter" onclick="addMoney(.25)">Add Quarter</button>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-outline-dark btn-sm w_nine" id="addDime" onclick="addMoney(.1)">Add Dime</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm w_nine" id="addNickel" onclick="addMoney(.05)">Add Nickel</button>
+                        </div>
+                    </form>
+                    <form class="top_3_black">
+                        <div class="form-group centered">
+                            <label for="vendingMessages" class="col-form-label">Messages</label>
+                            <input type="text" class="form-control form-control-sm m_0_auto" id="vendingMessages" readonly/>
+                        </div>
+                        <div class="form-group form-row">
+                            <label for="itemSelection" class="col-sm-2 col-form-label align-middle">Item:</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm centered m_0_auto" id="itemSelection" style="width: 3em;" readonly/>
+                            </div>
+                        </div>
+                        <div class="form-group centered">
+                            <button type="button" class="btn btn-outline-dark btn-sm w_nine" id="makePurchase">Make Purchase</button>
+                        </div>
+                    </form>
+                    <form class="centered top_3_black">
+                        <div class="form-group">
+                            <label for="vendingChange" class="col-form-label">Change</label>
+                            <input type="text" class="form-control form-control-sm centered m_0_auto" id="vendingChange" readonly/>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-outline-dark btn-sm w_nine" id="returnChange">Change Return</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.item {
+    border: solid black 2px;
+    margin: 1em 1em 0 1em;
+    height: 10.5em;
+}
+
+.item:hover {
+    background-color:lightblue;
+}
+
+.w_nine {
+    width: 9em;
+}
+
+.centered {
+    text-align: center;
+}
+
+.top_3_black {
+    border-top: solid black 3px;
+}
+
+.m_0_auto {
+    margin: 0 auto;
+}
